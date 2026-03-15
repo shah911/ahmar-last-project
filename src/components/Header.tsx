@@ -21,7 +21,7 @@ export const links = [
 function Header() {
   return (
     <div className="flex items-center justify-center font-inter h-20 w-[95%] mx-auto">
-      <div className="flex-1 z-10">
+      <div className="flex-1 z-99999">
         <Link href="/" className="text-4xl font-bold">
           LOGO
         </Link>

@@ -14,7 +14,7 @@ function Menu() {
         onClick={() => {
           SetIsOpen(!isOpen);
         }}
-        className={`relative h-10 w-10 z-10 flex items-center justify-center ease-in-out duration-200 ${isOpen ? "rotate-45" : "rotate-0"}`}
+        className={`relative h-10 w-10 z-99999 flex items-center justify-center ease-in-out duration-200 ${isOpen ? "rotate-45" : "rotate-0"}`}
       >
         <span className="h-0.5 w-5 bg-black rotate-90 absolute"></span>
         <span className="h-0.5 w-5 bg-black"></span>
@@ -26,7 +26,7 @@ function Menu() {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="bg-[#FF462E] absolute top-0 left-0 w-full"
+            className="bg-[#FF462E] absolute top-0 left-0 w-full z-9999"
           >
             <div className=" mt-20 w-[95%] mx-auto">
               <hr className="border-white h-px opacity-40" />
