@@ -25,7 +25,7 @@ export const links = [
 function Footer() {
   const pathname = usePathname();
   return (
-    <div className="w-[95%] mx-auto font-inter">
+    <div className="w-[95%] mx-auto font-inter pb-4">
       <div className="bg-slate-200 rounded-2xl p-4">
         <div className="relative h-100 w-full flex items-center justify-center">
           <span className="font-bold text-4xl absolute z-10 text-white">
@@ -39,7 +39,7 @@ function Footer() {
           />
         </div>
         {/* section 2 */}
-        <div className="w-full my-20 flex flex-col lg:flex-row">
+        <div className="w-full my-10 md:my-20 flex flex-col lg:flex-row">
           <div className="flex-1 flex flex-col lg:px-10">
             <h3 className="opacity-50 font-semibold text-3xl lg:text-5xl tracking-tight">
               Stay connected®
@@ -59,7 +59,7 @@ function Footer() {
               <CTA />
             </Link>
           </div>
-          <div className="flex-1 flex flex-col my-10 md:my-0">
+          <div className="flex-1 flex flex-col my-10 lg:my-0">
             <hr className="h-px opacity-20 lg:w-[75%]" />
             {links.map((link, i) => (
               <div key={i} className="flex flex-col">
@@ -95,24 +95,29 @@ function Footer() {
           </div>
         </div>
         {/* section 3 */}
-        <div className="px-10">
-          <hr className="h-px opacity-20" />
-          <div className="flex items-center justify-center">
-            <div className="flex-3">
-              <span className="text-9xl font-bold leading-[100%] tracking-tight">
+        <div className="lg:px-10">
+          <hr className="h-px opacity-20 mb-10" />
+          <div className="flex">
+            <div className="flex-2 hidden lg:flex">
+              <span className="text-[30vw] lg:text-[20vw] font-extrabold leading-[80%] tracking-tighter">
                 LOGO
               </span>
             </div>
-            <div className="flex-1 relative">
+            <div className="flex-1 relative w-[95vw] h-60">
               <Image
                 src="/demo.jpg"
                 alt="demo"
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover rounded-xl"
               />
             </div>
           </div>
-          <hr className="h-px opacity-20" />
+          <hr className="h-px opacity-20 mt-10" />
+          <div className="mt-5 mb-1">
+            <p className="text-lg">
+              Copyright © Shah <span className="font-geist-mono">2025</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
