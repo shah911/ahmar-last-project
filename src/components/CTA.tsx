@@ -7,7 +7,7 @@ function CTA() {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative bg-black h-14 w-44 flex items-center justify-center rounded-full cursor-pointer"
+      className="relative bg-white h-14 w-44 flex items-center justify-center rounded-full cursor-pointer"
     >
       <div
         className={`bg-[#FF462E] rounded-full h-12 ease-in-out duration-500 ${isHovered ? "w-42" : "w-12"} absolute left-1 flex items-center justify-center`}
@@ -33,7 +33,7 @@ function CTA() {
       </div>
       <div className="text-white z-10 absolute right-5 overflow-hidden h-5 flex flex-col items-center justify-center">
         <span
-          className={`duration-500 ease-in-out ${isHovered ? "-translate-y-3" : "translate-y-3"}`}
+          className={`duration-500 text-black ease-in-out ${isHovered ? "-translate-y-3" : "translate-y-3"}`}
         >
           Get in touch
         </span>

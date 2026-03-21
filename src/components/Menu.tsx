@@ -14,10 +14,10 @@ function Menu() {
         onClick={() => {
           SetIsOpen(!isOpen);
         }}
-        className={`relative h-10 w-10 z-99999 flex items-center justify-center ease-in-out duration-200 ${isOpen ? "rotate-45" : "rotate-0"}`}
+        className={`relative cursor-pointer h-10 w-10 z-99999 flex items-center justify-center ease-in-out duration-200 ${isOpen ? "rotate-45" : "rotate-0"}`}
       >
-        <span className="h-0.5 w-5 bg-black rotate-90 absolute"></span>
-        <span className="h-0.5 w-5 bg-black"></span>
+        <span className="h-0.5 w-5 bg-white rotate-90 absolute"></span>
+        <span className="h-0.5 w-5 bg-white"></span>
       </div>
       <AnimatePresence mode="wait">
         {isOpen && (

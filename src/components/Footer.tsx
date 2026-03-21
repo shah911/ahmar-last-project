@@ -113,8 +113,8 @@ function Footer() {
             </div>
           </div>
           <hr className="h-px opacity-20 mt-10" />
-          <div className="mt-5 mb-1">
-            <p className="text-lg">
+          <div className="mt-5 mb-1 flex items-center justify-center">
+            <p className="lg:text-lg">
               Copyright © Shah <span className="font-geist-mono">2025</span>
             </p>
           </div>
