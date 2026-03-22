@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { useState } from "react";
 
-function CTA() {
+function CTA({ text, color }: { text?: string; color?: string }) {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative bg-white h-14 w-44 flex items-center justify-center rounded-full cursor-pointer"
+      className={`relative ${color ? color : "bg-white"} h-14 w-44 flex items-center justify-center rounded-full cursor-pointer`}
     >
       <div
         className={`bg-[#FF462E] rounded-full h-12 ease-in-out duration-500 ${isHovered ? "w-42" : "w-12"} absolute left-1 flex items-center justify-center`}
@@ -40,7 +40,7 @@ function CTA() {
         <span
           className={`duration-500 ease-in-out ${isHovered ? "-translate-y-3" : "translate-y-3"}`}
         >
-          Get in touch
+          {text ? text : "Get in touch"}
         </span>
       </div>
     </div>
