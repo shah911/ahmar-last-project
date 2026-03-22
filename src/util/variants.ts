@@ -106,7 +106,7 @@ export const cover2: Variants = {
 
 export const slide: Variants = {
   initial: {
-    y: "10%",
+    y: "5%",
   },
   animate: {
     y: 0,
@@ -117,7 +117,7 @@ export const slide: Variants = {
     },
   },
   exit: {
-    y: "-10%",
+    y: "-5%",
     transition: {
       type: "tween",
       duration: 0.6,
