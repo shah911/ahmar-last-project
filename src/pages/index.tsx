@@ -1,5 +1,10 @@
 import Hero from "@/components/Hero";
+import Transition from "@/components/Transition";
 
 export default function Home() {
-  return <Hero />;
+  return (
+    <Transition>
+      <Hero />
+    </Transition>
+  );
 }

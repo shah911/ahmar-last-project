@@ -1,6 +1,5 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import "@/styles/globals.css";
+import { AnimatePresence } from "motion/react";
 import type { AppProps } from "next/app";
 import { Inter, Geist_Mono } from "next/font/google";
 
@@ -14,12 +13,12 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <div className={`${inter.variable} ${geist_Mono.variable} antialiased`}>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+      <AnimatePresence mode="wait">
+        <Component {...pageProps} key={router.route} />
+      </AnimatePresence>
     </div>
   );
 }
