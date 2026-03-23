@@ -2,8 +2,12 @@ import { cover, cover2, slide } from "@/util/variants";
 import Footer from "./Footer";
 import Header from "./Header";
 import { motion } from "motion/react";
+import { useEffect } from "react";
 
 function Transition({ children }: { children: React.ReactNode }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="relative">
       <motion.div
