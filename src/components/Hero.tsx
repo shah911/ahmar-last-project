@@ -15,6 +15,21 @@ const cards = [
   },
 ];
 
+const services = [
+  {
+    title: "Strategy & Planning",
+    desc: "We start by understanding your vision and business goals. Through in-depth research and strategic planning, we define the core structure and key elements needed for your project.",
+  },
+  {
+    title: "Design & Development",
+    desc: "Our team crafts a visually stunning and functional design that aligns with your brand. We focus on responsive layouts, and high-performance development to ensure a smooth experience.",
+  },
+  {
+    title: "Launch & Growth",
+    desc: "Once everything is tested and refined, we launch your project with precision. Post-launch, we provide ongoing support, updates, and strategies to help you scale and maximize results.",
+  },
+];
+
 function Hero() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -80,7 +95,7 @@ function Hero() {
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-5">
                   <div className="bg-[#FF462E] h-4 w-4 rounded-sm" />
-                  <span className="font-medium text-lg">
+                  <span className="font-medium lg:text-lg">
                     Hey, Just An Intro
                   </span>
                 </div>
@@ -108,6 +123,42 @@ function Hero() {
               </div>
             </div>
             <hr className="h-px opacity-20 mb-10" />
+            <div className="flex items-center justify-between mb-5">
+              <div className="flex items-center gap-2 mb-5">
+                <div className="bg-[#FF462E] h-4 w-4 rounded-sm" />
+                <span className="font-medium lg:text-lg">Approach Style</span>
+              </div>
+              <span className="font-geist-mono text-lg font-medium">©2025</span>
+            </div>
+            <div className="flex flex-col lg:flex-row gap-5">
+              {services.map((service, i) => (
+                <div className="flex-1 bg-slate-100 rounded-2xl p-5" key={i}>
+                  {/* HEAD */}
+                  <div className="flex items-center justify-between mb-34">
+                    <span className="font-geist-mono text-3xl font-semibold tracking-tighter">
+                      0{i + 1}
+                    </span>
+                    <div className="flex items-center justify-center gap-1">
+                      {services.map((_, index) => (
+                        <span
+                          key={i}
+                          className={`h-3 w-3 rounded-full ${i >= index ? "bg-[#FF462E]" : "bg-slate-200"} `}
+                        ></span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 mb-5">
+                    <div className="bg-[#FF462E] h-4 w-4 rounded-sm" />
+                    <span className="font-medium lg:text-lg">
+                      {service.title}
+                    </span>
+                  </div>
+                  <p className="opacity-60 font-medium tracking-tighter">
+                    {service.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
