@@ -30,6 +30,21 @@ const services = [
   },
 ];
 
+const scores = [
+  {
+    title: "Strategy",
+    rate: "25%",
+  },
+  {
+    title: "Design",
+    rate: "60%",
+  },
+  {
+    title: "Launch",
+    rate: "100%",
+  },
+];
+
 function Hero() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -123,6 +138,7 @@ function Hero() {
               </div>
             </div>
             <hr className="h-px opacity-20 mb-10" />
+            {/* SECTION 3 */}
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-2 mb-5">
                 <div className="bg-[#FF462E] h-4 w-4 rounded-sm" />
@@ -158,6 +174,25 @@ function Hero() {
                   </p>
                 </div>
               ))}
+            </div>
+            <div className="w-full my-10 md:my-20 flex flex-col-reverse lg:flex-row">
+              <div className="flex-1 flex flex-col lg:px-10">
+                <Link href="/contact">
+                  <CTA color="bg-slate-200" />
+                </Link>
+              </div>
+              <div className="flex-1 flex flex-col my-10 lg:my-0">
+                {scores.map((score, i) => (
+                  <div key={i} className="flex flex-col">
+                    <span className="capitalize flex items-center justify-between py-5 hover:opacity-100 transition-opacity duration-500">
+                      <span className="text-lg">{score.title}</span>
+                      <span className="font-geist-mono text-lg">
+                        {score.rate}
+                      </span>
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
