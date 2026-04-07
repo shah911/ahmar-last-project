@@ -55,10 +55,8 @@ function Hero() {
   const scaleY1 = useTransform(scrollYProgress, [0, 1], [0, 0.2]);
   const scaleY2 = useTransform(scrollYProgress, [0, 1], [0, 0.5]);
   const scaleY3 = useTransform(scrollYProgress, [0, 1], [0, 1]);
-  const scaleY4 = useTransform(scrollYProgress, [0, 1], [0, 0.5]);
-  const scaleY5 = useTransform(scrollYProgress, [0, 1], [0, 0.2]);
 
-  const blocks = [scaleY1, scaleY2, scaleY3, scaleY4, scaleY5];
+  const blocks = [scaleY1, scaleY2, scaleY3, scaleY2, scaleY1];
 
   return (
     <div ref={ref} className="relative flex flex-col -mt-20">
@@ -139,8 +137,8 @@ function Hero() {
             </div>
             <hr className="h-px opacity-20 mb-10" />
             {/* SECTION 3 */}
-            <div className="flex items-center justify-between mb-5">
-              <div className="flex items-center gap-2 mb-5">
+            <div className="flex items-center justify-between mb-10">
+              <div className="flex items-center gap-2">
                 <div className="bg-[#FF462E] h-4 w-4 rounded-sm" />
                 <span className="font-medium lg:text-lg">Approach Style</span>
               </div>

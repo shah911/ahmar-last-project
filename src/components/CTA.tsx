@@ -1,16 +1,26 @@
 import Image from "next/image";
 import { useState } from "react";
 
-function CTA({ text, color }: { text?: string; color?: string }) {
+function CTA({
+  text,
+  color,
+  ow,
+  iw,
+}: {
+  text?: string;
+  color?: string;
+  ow?: string;
+  iw?: string;
+}) {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`relative ${color ? color : "bg-white"} h-14 w-44 flex items-center justify-center rounded-full cursor-pointer`}
+      className={`relative ${color ? color : "bg-white"} h-14 ${ow ? ow : "w-44"} flex items-center justify-center rounded-full cursor-pointer`}
     >
       <div
-        className={`bg-[#FF462E] rounded-full h-12 ease-in-out duration-500 ${isHovered ? "w-42" : "w-12"} absolute left-1 flex items-center justify-center`}
+        className={`bg-[#FF462E] rounded-full h-12 ease-in-out duration-500 ${isHovered ? iw || "w-42" : "w-12"} absolute left-1 flex items-center justify-center`}
       >
         <span className="h-12 w-12 absolute left-0 rounded-full overflow-hidden flex items-center justify-center">
           <Image
@@ -35,7 +45,7 @@ function CTA({ text, color }: { text?: string; color?: string }) {
         <span
           className={`duration-500 text-black ease-in-out ${isHovered ? "-translate-y-3" : "translate-y-3"}`}
         >
-          Get in touch
+          {text ? text : "Get in touch"}
         </span>
         <span
           className={`duration-500 ease-in-out ${isHovered ? "-translate-y-3" : "translate-y-3"}`}
