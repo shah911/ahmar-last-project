@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import CTA from "./CTA";
 import Link from "next/link";
+import ProjectSection from "./ProjectSection";
 
 const projects = [
   {
@@ -17,18 +18,18 @@ const projects = [
     tag: "portfolio",
     url: "/work/project-1",
   },
-  //   {
-  //     title: "project",
-  //     img: "/demo.jpg",
-  //     tag: "portfolio",
-  //     url: "/work/project-1"
-  //   },
-  //   {
-  //     title: "project",
-  //     img: "/demo.jpg",
-  //     tag: "portfolio",
-  //     url: "/work/project-1"
-  //   },
+  {
+    title: "project",
+    img: "/demo.jpg",
+    tag: "portfolio",
+    url: "/work/project-1",
+  },
+  {
+    title: "project",
+    img: "/demo.jpg",
+    tag: "portfolio",
+    url: "/work/project-1",
+  },
 ];
 
 function ParallexSection({ img }: { img?: string }) {
@@ -87,10 +88,10 @@ function ParallexSection({ img }: { img?: string }) {
               <span className="font-geist-mono text-lg font-medium">©2025</span>
             </div>
             <div className="flex flex-col items-center justify-center">
-              <h1 className="text-[88px] tracking-tighter leading-[100%] font-semibold">
+              <h1 className="text-4xl md:text-5xl lg:text-[88px] tracking-tighter leading-[100%] font-semibold">
                 Feartured Portfolio®
               </h1>
-              <p className="tracking-tighter opacity-60 font-medium text-lg text-center lg:w-212.5 my-8">
+              <p className="tracking-tighter opacity-60 font-medium lg:text-lg text-center lg:w-212.5 my-8">
                 Explore a collection of high-quality, innovative designs crafted
                 to elevate brands and captivate audiences. Each project reflects
                 our commitment to creativity and excellence.
@@ -105,38 +106,7 @@ function ParallexSection({ img }: { img?: string }) {
               </Link>
             </div>
             {/* PROJECTS */}
-            <div className="flex flex-col lg:flex-row gap-5">
-              {projects.map((project, i) => (
-                <Link
-                  href={project.url}
-                  className="flex-1 bg-slate-200 p-3 rounded-2xl"
-                  key={i}
-                >
-                  <div className="h-110 w-full">
-                    <div className="relative group h-full w-full overflow-hidden rounded-lg">
-                      {/* Overlay */}
-                      <div className="absolute inset-0 z-20 bg-inherit/10 backdrop-blur-xs opacity-0 transition duration-700 ease-in-out group-hover:opacity-100" />
-                      {/* Image */}
-                      <Image
-                        src={project.img}
-                        alt={project.title}
-                        fill
-                        className="object-cover transition duration-700 ease-in-out group-hover:scale-125"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between my-5">
-                    <span className="capitalize text-lg font-medium">
-                      {project.title}
-                    </span>
-                    <span className="px-3 py-2 rounded-full capitalize bg-slate-100">
-                      {project.tag}
-                    </span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-            <hr className="h-px opacity-20 mb-10" />
+            <ProjectSection projects={projects} />
           </div>
         </div>
       </div>
