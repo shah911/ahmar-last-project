@@ -50,7 +50,7 @@ const stats = [
   },
 ];
 
-function MedialSection({ img }: { img?: string }) {
+function MedialSection() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -75,7 +75,7 @@ function MedialSection({ img }: { img?: string }) {
             className="relative h-full w-full "
           >
             <Image
-              src={img ? img : "/demo.jpg"}
+              src="/demo.jpg"
               alt="demo"
               fill
               priority
