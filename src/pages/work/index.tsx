@@ -39,6 +39,7 @@ const projects = [
     url: "/work/project-1",
   },
 ];
+
 function Work() {
   return (
     <Transition>
@@ -48,7 +49,7 @@ function Work() {
           desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
         <div className="w-[95%] mx-auto font-inter">
-          <hr className="h-px opacity-20 mt-30 mb-10" />
+          <hr className="h-px opacity-20 mt-15 lg:mt-20 mb-10" />
           <div className="flex items-center justify-between mb-10">
             <div className="flex items-center gap-2">
               <div className="bg-[#FF462E] h-4 w-4 rounded-sm" />

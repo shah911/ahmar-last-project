@@ -1,9 +1,9 @@
-import ParallexSection from "./ParallexSection";
+import MedialSection from "./MedialSection";
 
 function Projects() {
   return (
     <div>
-      <ParallexSection />
+      <MedialSection />
     </div>
   );
 }

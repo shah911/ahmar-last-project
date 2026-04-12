@@ -32,7 +32,25 @@ const projects = [
   },
 ];
 
-function ParallexSection({ img }: { img?: string }) {
+const stats = [
+  {
+    figure: "20+",
+    title: "Years Experience",
+    desc: "In the web design industry field.",
+  },
+  {
+    figure: "95+",
+    title: "Projects Done",
+    desc: "Around worldwide in last five years.",
+  },
+  {
+    figure: "200%",
+    title: "Satisfied Clients",
+    desc: "With a great experience and results.",
+  },
+];
+
+function MedialSection({ img }: { img?: string }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -107,6 +125,40 @@ function ParallexSection({ img }: { img?: string }) {
             </div>
             {/* PROJECTS */}
             <ProjectSection projects={projects} />
+            {/* PROJECTS */}
+            {/* LOWER END */}
+            <div className="flex flex-col lg:flex-row mb-30">
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-5">
+                  <div className="bg-[#FF462E] h-4 w-4 rounded-sm" />
+                  <span className="font-medium lg:text-lg">Stats & Facts</span>
+                </div>
+              </div>
+              <div className="flex-3 flex-col">
+                <h1 className="text-3xl lg:text-5xl font-semibold tracking-tighter leading-[100%]">
+                  I take pride in creating solutions that are not only visually
+                  stunning® but also highly functional. Every number tells a
+                  story, and I’m excited to bring that same dedication.
+                </h1>
+              </div>
+            </div>
+            <div className="flex flex-col lg:flex-row gap-20 justify-between mb-20 lg:mb-30">
+              {stats.map((stat, i) => (
+                <div key={i} className="flex-1 flex flex-col">
+                  <h2 className="text-7xl lg:text-9xl font-medium tracking-tighter leading-[100%] font-geist-mono">
+                    {stat.figure}
+                  </h2>
+                  <hr className="h-px opacity-20 my-10" />
+                  <span className="text-lg lg:text-3xl font-semibold tracking-tighter leading-[100%] mb-2">
+                    {stat.title}
+                  </span>
+                  <p className="lg:text-lg font-medium opacity-50 tracking-tighter leading-[100%]">
+                    {stat.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+            {/* LOWER END */}
           </div>
         </div>
       </div>
@@ -114,4 +166,4 @@ function ParallexSection({ img }: { img?: string }) {
   );
 }
 
-export default ParallexSection;
+export default MedialSection;

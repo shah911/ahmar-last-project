@@ -20,7 +20,7 @@ function ProjectSection({ projects }: { projects: set }) {
           <ProjectSet key={i} Set={set} className="lg:sticky lg:top-0" />
         ))}
       </div>
-      <hr className="h-px opacity-20 my-20" />
+      <hr className="h-px opacity-20 my-10 lg:my-20" />
     </div>
   );
 }

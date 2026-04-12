@@ -19,7 +19,7 @@ function ProjectSet({ Set, className }: { Set: set; className?: string }) {
           className="flex-1 bg-slate-200 p-3 rounded-2xl"
           key={i}
         >
-          <div className="h-110 w-full">
+          <div className="h-80 lg:h-110 w-full">
             <div className="relative group h-full w-full overflow-hidden rounded-lg">
               {/* Overlay */}
               <div className="absolute inset-0 z-20 bg-inherit/10 backdrop-blur-xs opacity-0 transition duration-700 ease-in-out group-hover:opacity-100" />
