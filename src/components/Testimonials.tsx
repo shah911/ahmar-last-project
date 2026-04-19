@@ -106,7 +106,7 @@ function Testimonials() {
                 lasting impressions.
               </p>
             </div>
-            <div className="flex flex-wrap gap-5 mt-10 mb-20">
+            <div className="flex flex-wrap gap-5 mt-10">
               {testimonials.map((testimonial, i) => (
                 <div
                   key={i}
