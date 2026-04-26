@@ -1,3 +1,4 @@
+import AboutSection from "@/components/AboutSection";
 import CTA from "@/components/CTA";
 import Top from "@/components/Top";
 import Transition from "@/components/Transition";
@@ -57,12 +58,15 @@ function About() {
               {services.map((service, i) => (
                 <div key={i}>
                   <div className="flex flex-col lg:flex-row gap-5 justify-between">
-                    <h2 className="font-medium text-lg">{service.title}</h2>
-                    <p className="lg:w-[40%] font-medium opacity-50 tracking-tighter leading-[100%] lg:text-lg">
+                    <h2 className="flex-1 font-medium text-lg">
+                      {service.title}
+                    </h2>
+                    {/* assign a specific width */}
+                    <p className="flex-[1.5] font-medium opacity-50 tracking-tighter leading-[100%] lg:text-lg">
                       {service.desc}
                     </p>
-                    <div className="flex lg:justify-end">
-                      <span className="bg-slate-100 rounded-full py-2 px-4 w-fit h-fit">
+                    <div className="flex-1 flex lg:justify-end">
+                      <span className="bg-slate-100 rounded-full py-2 px-4 w-fit h-fit font-geist-mono">
                         {service.price}
                       </span>
                     </div>
@@ -74,6 +78,7 @@ function About() {
           </div>
         </div>
       </div>
+      <AboutSection />
     </Transition>
   );
 }

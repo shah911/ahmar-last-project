@@ -20,7 +20,6 @@ function ContactSection() {
   const onSubmit = async (formData: FormData) => {
     const { name, email, message } = formData;
     console.log(name, email, message);
-    // e.preventDefault()
   };
 
   return (
