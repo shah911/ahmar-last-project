@@ -11,7 +11,9 @@ function Contact() {
           desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
       </div>
-      <ContactSection />
+      <div className="pt-5 lg:pt-0">
+        <ContactSection />
+      </div>
     </Transition>
   );
 }
