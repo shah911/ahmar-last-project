@@ -155,7 +155,7 @@ function Hero() {
                     <div className="flex items-center justify-center gap-1">
                       {services.map((_, index) => (
                         <span
-                          key={i}
+                          key={index}
                           className={`h-3 w-3 rounded-full ${i >= index ? "bg-[#FF462E]" : "bg-slate-200"} `}
                         ></span>
                       ))}
